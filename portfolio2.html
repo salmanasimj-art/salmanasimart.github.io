@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Salma Nasim | Frontend Developer</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Poppins',sans-serif;
+  background:#0f0f0f;
+  color:#fff;
+  scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+header{
+  position:fixed;
+  top:0;width:100%;
+  background:rgba(0,0,0,0.7);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+}
+nav{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 20px;
+}
+nav h1{color:#00f2ff}
+nav ul{display:flex;gap:20px;list-style:none}
+nav ul li a{
+  color:#fff;
+  text-decoration:none;
+  font-size:15px;
+}
+nav ul li a:hover{color:#00f2ff}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  background:linear-gradient(120deg,#000,#111,#000);
+}
+.hero h2{font-size:46px}
+.hero span{color:#00f2ff}
+.hero p{color:#ccc;margin-top:10px}
+.hero-btns{
+  margin-top:25px;
+}
+.hero-btns a, .hero-btns button{
+  padding:12px 30px;
+  border-radius:30px;
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+  text-decoration:none;
+  margin:8px;
+  display:inline-block;
+}
+.primary-btn{
+  background:#00f2ff;
+  color:#000;
+}
+.secondary-btn{
+  border:2px solid #00f2ff;
+  color:#00f2ff;
+  background:transparent;
+}
+.secondary-btn:hover{
+  background:#00f2ff;
+  color:#000;
+}
+
+/* SECTION */
+section{
+  padding:90px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+section h2{
+  text-align:center;
+  color:#00f2ff;
+  margin-bottom:40px;
+  font-size:36px;
+}
+
+/* SKILLS */
+.skills{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:25px;
+}
+.skill-card{
+  background:#161616;
+  padding:25px;
+  border-radius:15px;
+  text-align:center;
+  transition:.4s;
+}
+.skill-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 25px #00f2ff55;
+}
+.skill-card i{
+  font-size:38px;
+  color:#00f2ff;
+  margin-bottom:10px;
+}
+
+/* PROJECTS */
+.projects{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+.project-card{
+  background:#161616;
+  padding:25px;
+  border-radius:20px;
+  transition:.4s;
+}
+.project-card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 0 25px #00f2ff44;
+}
+
+/* GALLERY */
+.gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+.gallery img{
+  width:100%;
+  border-radius:20px;
+  transition:.4s;
+}
+.gallery img:hover{
+  transform:scale(1.05);
+  box-shadow:0 0 25px #00f2ff66;
+}
+
+/* CONTACT */
+.contact{
+  text-align:center;
+}
+.contact a{
+  display:block;
+  color:#00f2ff;
+  text-decoration:none;
+  margin:10px 0;
+  font-size:18px;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px;
+  background:#000;
+  color:#aaa;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav>
+<h1>Portfolio</h1>
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#gallery">Gallery</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="resume.pdf" download>Resume</a></li>
+</ul>
+</nav>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+<div data-aos="zoom-in">
+<h2>Hi, I'm <span>Salma Nasim</span></h2>
+<h3 id="typewriter" style="color:#00f2ff;margin-top:10px"></h3>
+<p>
+Frontend Developer • Digital Marketer • AI Creative<br>
+Worked with <b>13+ companies</b>
+</p>
+
+<div class="hero-btns">
+<button class="primary-btn" onclick="document.getElementById('projects').scrollIntoView()">
+View Work
+</button>
+
+<a href="resume.pdf" download class="secondary-btn">
+Download Resume
+</a>
+</div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<h2>Skills & Tools</h2>
+<div class="skills">
+<div class="skill-card"><i class="fa-brands fa-html5"></i><h4>HTML5</h4></div>
+<div class="skill-card"><i class="fa-brands fa-css3-alt"></i><h4>CSS3</h4></div>
+<div class="skill-card"><i class="fa-brands fa-js"></i><h4>JavaScript</h4></div>
+<div class="skill-card"><i class="fa-brands fa-bootstrap"></i><h4>Bootstrap</h4></div>
+<div class="skill-card"><i class="fa-brands fa-react"></i><h4>React (Learning)</h4></div>
+<div class="skill-card"><i class="fa-solid fa-robot"></i><h4>AI Tools</h4></div>
+<div class="skill-card"><i class="fa-solid fa-video"></i><h4>AI Video Creation</h4></div>
+<div class="skill-card"><i class="fa-brands fa-facebook"></i><h4>FB & IG Ads</h4></div>
+<div class="skill-card"><i class="fa-solid fa-image"></i><h4>Poster Design</h4></div>
+</div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+<h2>Projects</h2>
+<div class="projects">
+<div class="project-card">To-Do App</div>
+<div class="project-card">Dictionary App</div>
+<div class="project-card">Weather App</div>
+<div class="project-card">Image Search App</div>
+<div class="project-card">Student Grade Calculator</div>
+<div class="project-card">E-Commerce Website</div>
+<div class="project-card">Juice Shop Animated Website</div>
+</div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+<h2>Poster & Ad Creatives</h2>
+<p style="text-align:center;color:#ccc;margin-bottom:25px">
+Marketing posters & ads designed for 13+ companies
+</p>
+<div class="gallery">
+<img src="poster1.jpg">
+<img src="poster2.jpg">
+<img src="poster3.png">
+<img src="poster6.png">
+<!-- <img src="poster4.png" style="width: 400px;height: 400px;"> -->
+<!-- <img src="poster5.png"> -->
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact Me</h2>
+<div class="contact">
+<p>📧 salmanasimj@gmail.com</p>
+<a href="https://github.com/salmanasimart" target="_blank">🐙 GitHub</a>
+<a href="https://wa.me/919585955255" target="_blank">📱 WhatsApp</a>
+</div>
+</section>
+
+<footer>
+© 2026 Salma Nasim | Frontend Developer & Digital Marketer
+</footer>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+AOS.init({duration:1000,once:true});
+
+/* Typewriter Effect */
+const roles=["Frontend Developer","Digital Marketer","AI Video Creator"];
+let r=0,c=0,del=false;
+const speed=100;
+function type(){
+  let word=roles[r];
+  if(!del && c<word.length){
+    document.getElementById("typewriter").innerHTML+=word[c++];
+  }else if(del && c>0){
+    document.getElementById("typewriter").innerHTML=word.substring(0,--c);
+  }else{
+    del=!del;
+    if(!del) r=(r+1)%roles.length;
+  }
+  setTimeout(type,del?50:100);
+}
+type();
+</script>
+
+</body>
+</html>
