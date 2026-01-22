@@ -47,6 +47,42 @@ nav ul li a{
   font-size:15px;
 }
 nav ul li a:hover{color:#00f2ff}
+/* MOBILE NAV */
+.menu-toggle{
+  display:none;
+  font-size:26px;
+  color:#00f2ff;
+  cursor:pointer;
+}
+
+@media(max-width:768px){
+  nav ul{
+    position:absolute;
+    top:70px;
+    left:0;
+    width:100%;
+    background:#000;
+    flex-direction:column;
+    align-items:center;
+    gap:0;
+    max-height:0;
+    overflow:hidden;
+    transition:.4s ease;
+  }
+
+  nav ul.active{
+    max-height:400px;
+    padding:20px 0;
+  }
+
+  nav ul li{
+    padding:12px 0;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
+}
 
 /* HERO */
 .hero{
@@ -183,16 +219,24 @@ footer{
 
 <header>
 <nav>
-<h1>Portfolio</h1>
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#skills">Skills</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#gallery">Gallery</a></li>
-<li><a href="#contact">Contact</a></li>
-<li><a href="resume.pdf" download>Resume</a></li>
-</ul>
+  <h1>Portfolio</h1>
+
+  <!-- Hamburger -->
+  <div class="menu-toggle" id="menu-toggle">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <ul id="nav-menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#internship">Internship</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="resume.pdf" download>Resume</a></li>
+  </ul>
 </nav>
+
 </header>
 
 <!-- HERO -->
@@ -225,7 +269,7 @@ Download Resume
 <div class="skill-card"><i class="fa-brands fa-css3-alt"></i><h4>CSS3</h4></div>
 <div class="skill-card"><i class="fa-brands fa-js"></i><h4>JavaScript</h4></div>
 <div class="skill-card"><i class="fa-brands fa-bootstrap"></i><h4>Bootstrap</h4></div>
-<div class="skill-card"><i class="fa-brands fa-react"></i><h4>React (Learning)</h4></div>
+<div class="skill-card"><i class="fa-brands fa-react"></i><h4>React </h4></div>
 <div class="skill-card"><i class="fa-solid fa-robot"></i><h4>AI Tools</h4></div>
 <div class="skill-card"><i class="fa-solid fa-video"></i><h4>AI Video Creation</h4></div>
 <div class="skill-card"><i class="fa-brands fa-facebook"></i><h4>FB & IG Ads</h4></div>
@@ -243,7 +287,39 @@ Download Resume
 <div class="project-card">Image Search App</div>
 <div class="project-card">Student Grade Calculator</div>
 <div class="project-card">E-Commerce Website</div>
-<div class="project-card">Juice Shop Animated Website</div>
+<div class="project-card">Animated Website</div>
+  <div class="project-card">Recipie API</div>
+
+</div>
+</section>
+<!-- INTERNSHIP PROJECTS -->
+<section id="internship">
+<h2>Internship Projects</h2>
+
+<div class="projects">
+
+  <div class="project-card">
+    <h4>Blood Group Identification System</h4>
+    <p style="color:#ccc;margin-top:8px">
+      Developed a frontend application to identify user blood group using fingerprint image input.
+      Focused on UI design, image upload, and result display.
+    </p>
+    <p style="color:#00f2ff;margin-top:10px;font-size:14px">
+      HTML • CSS • JavaScript
+    </p>
+  </div>
+
+  <div class="project-card">
+    <h4>Traffic Analysis & Visualization System</h4>
+    <p style="color:#ccc;margin-top:8px">
+      Created a data-driven dashboard that analyzes vehicle count, average speed, and time ranges
+      from Excel inputs and displays results using pie and line charts.
+    </p>
+    <p style="color:#00f2ff;margin-top:10px;font-size:14px">
+      HTML • CSS • JavaScript • Chart.js
+    </p>
+  </div>
+
 </div>
 </section>
 
@@ -300,5 +376,16 @@ function type(){
 type();
 </script>
 
+  <script>
+const toggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("nav-menu");
+
+toggle.onclick = () => {
+  menu.classList.toggle("active");
+};
+</script>
+
+
 </body>
 </html>
+
